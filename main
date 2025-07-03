@@ -1,0 +1,11 @@
+/ (root)
+├─ index.html
+├─ styles/
+│   └─ main.css
+├─ scripts/
+│   └─ auction.js
+├─ data/            (optional static JSON for demo bids)
+│   └─ items.json
+└─ assets/
+    ├─ img/
+    └─ fonts/
