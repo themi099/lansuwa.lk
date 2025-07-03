@@ -1,0 +1,17 @@
+import { initializeApp } from 'firebase/app';
+import { getFirestore, doc, onSnapshot, updateDoc } from 'firebase/firestore';
+
+const app = initializeApp({ /* your config */ });
+const db  = getFirestore(app);
+const docRef = doc(db, 'auctions', 'vintage-clock');
+
+// Listen for updates
+onSnapshot(docRef, snap => {
+  priceEl.textContent = snap.data().currentBid;
+});
+
+// Place a bid
+bidBtn.onclick = async () => {
+  const newBid = Number(bidInput.value);
+  await updateDoc(docRef, { currentBid: newBid });
+};
