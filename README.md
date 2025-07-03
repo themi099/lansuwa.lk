@@ -1,0 +1,2 @@
+# lansuwa.lk
+Easy solutions 
